@@ -1,0 +1,95 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
+
+/* flex + flex-direction: column 으로 가운데 세로 정렬 */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 380px;
+}
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 배경이미지 스타일 */
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+
+/* 날씨 정보 오른쪽 위 고정 */
+.js-temp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+}
+
+.js-location {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+}
+
+/* 시계 크기 */
+.js-clock h1 {
+  font-size: 160px;
+}
+
+/* 환영인사 폰트사이즈 */
+.js-greetings,
+.js-form {
+  font-size: 50px;
+  margin-bottom: 100px;
+}
+
+.js-toDoForm {
+  border: none;
+  border: 0px 0px 0px 0px;
+}
+
+/* toDo 입력양식 디자인 */
+.js-toDoForm input[type="text"] {
+  border: none;
+  width: 600px;
+  font-size: 40px;
+  border-bottom: 2px solid white;
+  background: inherit;
+}
+
+.js-toDoForm input:focus {
+  outline: none;
+  color: white;
+  text-align: center;
+}
+
+.js-toDoForm div {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+}
